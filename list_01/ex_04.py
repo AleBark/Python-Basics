@@ -13,14 +13,14 @@ def main():
             product_value_float = float(product_value)
 
             print("Cash with 5% discount: ", round((product_value_float -
-                  percentage(5, product_value_float), 2), "\n")
+                                                    percentage(5, product_value_float), 2), "\n"))
 
             print("The value of the installment in 2x :",
                   round((product_value_float/2), 2), "\n")
 
             print("The value of the installment in 3x with a 5% increase:",
-                 round((product_value_float + percentage(5,
-                       product_value_float), 2 / 3), 2), "\n")
+                  round((product_value_float + percentage(5,
+                                                          product_value_float), 2 / 3), 2), "\n")
             return True
     else:
         print("Empty input \n")
