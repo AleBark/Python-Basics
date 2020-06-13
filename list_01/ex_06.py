@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Algorithm that calculates the amount of paint cans needed to paint a cylinder tank, where its height and radius is provided.
-# 0.Considering the following data:
-# 1.The paint can costs R $ 50.00
+# Considering the following data:
+# 1.The paint can costs R$ 50.00
 # 2.Each can contains 5 liters
 # 3.Each liter of paint paints 3 square meters.
 # 4.User input: height and radius of the cylinder.
