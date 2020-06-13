@@ -3,11 +3,11 @@
 
 def main():
 
-    user_input = input("Birthdate: ")
+    birthdate = input("Birthdate: ")
 
-    if user_input:
-        if input_can_be_parsed(user_input) and input_is_a_valid_date(user_input):
-            print("Person age in 2021: ", 2021 - int(user_input), "\n")
+    if birthdate:
+        if input_can_be_parsed(birthdate) and input_is_a_valid_date(birthdate):
+            print("Person age in 2021: ", 2021 - int(birthdate), "\n")
             return True
     else:
         print("Empty input \n")

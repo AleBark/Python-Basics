@@ -6,20 +6,21 @@
 
 def main():
 
-    user_input = input("Product value: ")
+    product_value = input("Product value: ")
 
-    if user_input:
-        if input_can_be_parsed(user_input) and input_is_greater_than_zero(user_input):
-            user_input_float = float(user_input)
+    if product_value:
+        if input_can_be_parsed(product_value) and input_is_greater_than_zero(product_value):
+            product_value_float = float(product_value)
 
-            print("Cash with 5% discount: ", user_input_float -
-                  percentage(5, user_input_float), "\n")
+            print("Cash with 5% discount: ", round((product_value_float -
+                  percentage(5, product_value_float), 2), "\n")
 
             print("The value of the installment in 2x :",
-                  user_input_float/2, "\n")
+                  round((product_value_float/2), 2), "\n")
 
             print("The value of the installment in 3x with a 5% increase:",
-                  (user_input_float + percentage(5, user_input_float)) / 3, "\n")
+                 round((product_value_float + percentage(5,
+                       product_value_float), 2 / 3), 2), "\n")
             return True
     else:
         print("Empty input \n")
@@ -30,8 +31,8 @@ def percentage(part, whole):
     return 100 * part / float(whole)
 
 
-def input_is_greater_than_zero(user_input):
-    return int(user_input) > 0
+def input_is_greater_than_zero(product_value):
+    return int(product_value) > 0
 
 
 def input_can_be_parsed(input):

@@ -4,12 +4,12 @@
 
 def main():
     minimum_wage_value = 1045
-    user_input = input("Wage: ")
+    wage = input("Wage: ")
 
-    if user_input:
-        if input_can_be_parsed(user_input):
+    if wage:
+        if input_can_be_parsed(wage):
             print("Minimum wage quantity: ", round(
-                float(user_input)/minimum_wage_value, 2), "\n")
+                float(wage)/minimum_wage_value, 2), "\n")
             return True
     else:
         print("Empty input \n")
