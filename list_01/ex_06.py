@@ -51,13 +51,6 @@ def input_can_be_parsed(input):
         print("Invalid input\n")
         return False
 
-    # float precolata, altura, arealateral, areadabase, areatotal, custo;
-    # int raio, quantidadelatas;
-
-    # scanf("%f",&precolata);
-    # scanf("%d",&raio);
-    # scanf("%f",&altura);
-
 
 if __name__ == '__main__':
     while True:
