@@ -10,12 +10,13 @@ def main():
     if user_input:
         if input_can_be_parsed(user_input) and input_is_a_positive_integer(user_input):
             copies = int(user_input)
-            if copies < 100:
-                cost = copies * 0.25
-            else:
-                cost = copies * 0.20
+            copy_cost = 0.20
 
-            print("Total cost: ", round(cost, 2))
+            if copies < 100:
+                copy_cost = 0.25
+
+            total = copies * copy_cost
+            print("Total cost: ", round(total, 2))
     else:
         print("Empty input \n")
     return False
