@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# BMI (Body Mass Index) is calculated using the following formula: BMI = mass / height**2
-# Develop an algorithm that reads the user's mass (in kilograms) and height (in meters) and shows the BMI value and whether it is in the range
-# considered “Normal” according to the criteria presented in the WHO (World Health Organization) table: 18.5 ≤ BMI <25.
+# The BMI, body mass index, is calculated using the following formula: BMI = mass / height**2
+# Develop an algorithm that reads the user's mass (in kilograms) and height (in meters) and shows the BMI value
+# and what his condition is according to the criteria presented in the WHO (World Health Organization) table
 
 def main():
 
