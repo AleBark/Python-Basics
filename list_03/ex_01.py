@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+# Develop an algorithm that informs your electoral situation, knowing that:
+# A person who has < 16 years do not vote
+# Voting is optional for adults between 16 and 18, or over 65 years
+# Voting is mandatory for adults between 18 and 65
 
 
 def main():

@@ -1,4 +1,5 @@
 .vscode
+.idea
 geckodriver.log
 web_scraper/models/__pycache__
 sample.py
