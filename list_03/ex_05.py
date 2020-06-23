@@ -48,7 +48,7 @@ def input_is_a_valid_int(input):
         int(input)
         return True
     except ValueError:
-        print("Invalid sex\n")
+        print("Invalid input\n")
         return False
 
 
