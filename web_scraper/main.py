@@ -10,7 +10,6 @@ Ale Bark Bruneri
 def main():
     html_handler = HtmlHandler("https://pixabay.com/pt/images/search/")
     html = html_handler.get_html()
-
     soup = BeautifulSoup(html, 'html.parser')
     div_items = soup.find('div', attrs={'class': 'search_results'})
     images = len(list(div_items.children))
