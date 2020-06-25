@@ -31,16 +31,3 @@ class HtmlHandler(object):
         for x in range(scroll_quantity):
             component.send_keys(Keys.PAGE_DOWN)
 
-    def is_visible_in_viewport_by_class_name(self, classname):
-        element = self.driver.find_element_by_class_name(classname)
-        return self.driver.execute_script(
-            "var elem = arguments[0],                 " +
-            "  box = elem.getBoundingClientRect(),    " +
-            "  cx = box.left + box.width / 2,         " +
-            "  cy = box.top + box.height / 2,         " +
-            "  e = document.elementFromPoint(cx, cy); " +
-            "for (; e; e = e.parentElement) {         " +
-            "  if (e === elem)                        " +
-            "    return true;                         " +
-            "}                                        " +
-            "return false;                            ", element)
