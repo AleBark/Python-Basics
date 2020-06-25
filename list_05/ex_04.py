@@ -9,7 +9,7 @@ def main():
         integer = input("Input: ")
 
         if input_is_a_valid_int(integer):
-            input_list.append(integer)
+            input_list.append(int(integer))
         else:
             break
 
