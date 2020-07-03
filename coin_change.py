@@ -18,27 +18,19 @@ def main():
             valor_conta = float(valor_conta)
 
             if valor_pago >= valor_conta:
-                calcular_troco(valor_pago - valor_conta, arr_moedas_disponiveis)
-            else:
-                print("Valor pago insuficiente \n")
-                return False
-        print("Condições de execução não foram atendidas, reiniciando! \n")
-        return True
+                return calcular_troco(valor_pago - valor_conta, arr_moedas_existentes, arr_moedas_disponiveis)
+
+        print("Valores inválidos, reiniciando!")
+        return False
 
 
-def calcular_troco(troco, arr_moedas_disponiveis):
-    trocos_possieis = [100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.5, 0.1]
-    changes_quantity = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
+def calcular_troco(troco, arr_moedas_existentes, arr_moedas_disponiveis):
     print("Troco fornecido:", troco, '\n')
-    if change != 0:
-        for x in range(len(posible_changes)):
-            cont = 0
-            while change >= posible_changes[x]:
-                change = change - posible_changes[x]
-                cont += 1
-                changes_quantity[x] = cont
-    print(posible_changes, '-', changes_quantity)
+
+    if troco != 0:
+        for x in range(len(arr_moedas_existentes)):
+            x = x
+    return True
 
 
 def validar_moedas_disponiveis(arr_moedas_existentes):
