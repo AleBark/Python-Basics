@@ -22,7 +22,7 @@ def main():
                 if valor_pago - valor_conta == 0:
                     print("Valor ok, não há necessidade de troco!")
                     return False
-                return calcular_troco(valor_pago - valor_conta, arr_moedas_existentes, arr_moedas_disponiveis)
+                return calcular_troco(round(valor_pago - valor_conta, 2), arr_moedas_existentes, arr_moedas_disponiveis)
 
         print("Valores inválidos, reiniciando!")
         return False
@@ -62,24 +62,22 @@ def calcular_troco(troco, arr_moedas_existentes, arr_moedas_disponiveis):
     print("Troco:", troco, '\n')
     arr_moedas_troco = [0, 0, 0, 0, 0]
 
-    # troco = 10.21
-    # existente  [1, 0.5, 0.25, 0.10, 0.5]
-    # disponivel [3,  0,   0,    0,    1 ]
-
     for x in range(len(arr_moedas_existentes)):
         quantidade_moeda = 0
         while troco >= arr_moedas_existentes[x]:
             if arr_moedas_disponiveis[x] >= 1:
-                troco = troco - arr_moedas_existentes[x]
+                troco = round(troco - arr_moedas_existentes[x], 2)
                 quantidade_moeda += 1
                 arr_moedas_troco[x] = quantidade_moeda
                 arr_moedas_disponiveis[x] = arr_moedas_disponiveis[x] - 1
+            else:
+                break
 
     if troco != 0:
-        print("Quantidade de moedas em caixa insuficiente, reiniciando")
+        print("Quantidade de moedas em caixa insuficiente, faltaram", troco, "reais.. reiniciando")
         return False
 
-    print(arr_moedas_troco)
+    print("Troco final [1 real, 0.50 centavos, 0.25 centavos, 0.10 centavos, 0.05 centavos] :", arr_moedas_troco)
     return True
 
 
