@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 
-def main():
+def main(arr_moedas_disponiveis):
     print("________________ \n")
-    arr_moedas_existentes = [1, 0.5, 0.25, 0.10, 0.05]
-    arr_moedas_disponiveis = validar_entrada_moedas(arr_moedas_existentes)
 
     if arr_moedas_disponiveis:
+
         valor_conta = input("Valor da conta:")
         valor_pago = input("Valor pago:")
 
@@ -77,10 +76,16 @@ def calcular_troco(troco, arr_moedas_existentes, arr_moedas_disponiveis):
         print("Quantidade de moedas em caixa insuficiente, faltaram", troco, "reais.. reiniciando")
         return False
 
-    print("Troco final [1 real, 0.50 centavos, 0.25 centavos, 0.10 centavos, 0.05 centavos] :", arr_moedas_troco)
+    print("Troco fornecido ao cliente [1 real, 0.50 centavos, 0.25 centavos, 0.10 centavos, 0.05 centavos] :",
+          arr_moedas_troco)
+    print("Troco atual na máquina [1 real, 0.50 centavos, 0.25 centavos, 0.10 centavos, 0.05 centavos] :",
+          arr_moedas_disponiveis)
     return True
 
 
 if __name__ == '__main__':
+    arr_moedas_existentes = [1, 0.5, 0.25, 0.10, 0.05]
+    arr_moedas_disponiveis = validar_entrada_moedas(arr_moedas_existentes)
+
     while True:
-        main()
+        main(arr_moedas_disponiveis)
