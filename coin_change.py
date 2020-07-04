@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+Ale Bark Bruneri
+"""
+
 def main(arr_moedas_disponiveis):
     print("________________ \n")
 
